@@ -1,0 +1,182 @@
+@charset "UTF-8";
+img {
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto 100px auto;
+  text-align: center; /*  タイトルが中央配置になる */
+  padding: 0 4%;
+}
+@media screen and (min-width: 1025px) {
+  .wrapper {
+    width: 960px;
+  }
+}
+
+/* title */
+.section-title {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  width: 110px;
+  text-align: center;
+  margin-bottom: 75px;
+  border-bottom: 1px solid #000;
+}
+
+/* header */
+#header {
+  margin: 0 auto; /* commonで指定したmarginを打ち消す */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; /* コンテンツを中央寄せ */
+  /* hover */
+}
+@media screen and (min-width: 1025px) {
+  header {
+    width: 960px;
+  }
+}
+header .header-logo {
+  width: 120px;
+  padding: 10px 0;
+  line-height: 1; /* ☆ line hightは単位なしの方が好ましい*/
+}
+header .header-logo a {
+  display: block;
+}
+header .header-logo img {
+  width: 100%;
+}
+header ul {
+  display: flex;
+  padding: 10px 0;
+}
+header ul li:not(:first-child) {
+  padding-left: 24px; /* 最初の要素意外に適用 */
+}
+header li a {
+  color: #24292e;
+}
+header li a:hover {
+  opacity: 0.7;
+}
+
+/* About */
+.about_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ☆ */
+}
+@media screen and (max-width: 767px) {
+  .about_inner {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .about_inner {
+    flex-direction: row;
+  }
+}
+
+#about img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+@media screen and (min-width: 1025px) {
+  #about img {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #about {
+    margin-bottom: 3%;
+  }
+}
+
+.about_txt {
+  text-align: left;
+}
+@media screen and (min-width: 1025px) {
+  .about_txt {
+    width: 397px;
+  }
+}
+.about_txt h3 {
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+/* bicycle */
+@media screen and (min-width: 1025px) {
+  .bicycle_inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.bicycle_inner .item {
+  text-align: center;
+  padding: 0 5px 0;
+}
+@media screen and (min-width: 1025px) {
+  .bicycle_inner .item {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bicycle_inner .item {
+    margin-bottom: 34px;
+  }
+}
+.bicycle_inner .item h3 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+.bicycle_inner .item .bicycle_txt {
+  font-size: 14px;
+}
+@media not all and (min-width: 768px) {
+  .bicycle_inner .bicycle_item {
+    width: 100%;
+  }
+}
+
+.mainvisual {
+  margin-bottom: 80px;
+}
+.mainvisual img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover; /* 画面いっぱいに */
+  max-width: 1920px; /* これ以上は広げない */
+}
+@media screen and (max-width: 767px) {
+  .mainvisual img {
+    height: calc(100vh - 60px); /* アドレスバーが表示された状態では、その分だけ下に押し出されてしまうから60px分引いてあげる。 */
+  }
+}
+
+.article_content {
+  padding: 0 3%;
+}
+
+.article_title {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 4%;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+}/*# sourceMappingURL=style.css.map */

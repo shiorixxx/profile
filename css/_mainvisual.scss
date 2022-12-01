@@ -1,0 +1,18 @@
+.mainvisual {
+  
+    margin-bottom: 80px;
+    
+  
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;/* 画面いっぱいに */
+      max-width: 1920px;/* これ以上は広げない */
+
+      @include mq(sm){
+        height: calc(100vh - 60px);/* アドレスバーが表示された状態では、その分だけ下に押し出されてしまうから60px分引いてあげる。 */
+      }
+    }
+  }
+  
+  

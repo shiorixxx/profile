@@ -1,0 +1,51 @@
+/* header */
+#header{
+  margin: 0 auto;/* commonで指定したmarginを打ち消す */
+}
+header {
+    @include mq(lg){
+        width: 960px;    
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;/* コンテンツを中央寄せ */
+ 
+  
+  
+    .header-logo {
+    width:120px ;
+    padding: 10px 0;
+    line-height: 1;/* ☆ line hightは単位なしの方が好ましい*/
+
+    a{
+      display: block;
+    }
+  
+    img{
+    width: 100%;
+    }
+    
+    }
+  
+    ul {
+      display: flex;
+      padding: 10px 0;
+    }
+  
+    ul li:not(:first-child) {
+      padding-left: 24px;/* 最初の要素意外に適用 */
+    }
+
+
+    /* hover */
+    li a{
+      color: #24292e;
+
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+    
+  }
+  

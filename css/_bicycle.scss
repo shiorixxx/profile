@@ -1,0 +1,37 @@
+/* bicycle */
+.bicycle_inner{
+       @include mq(lg){
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+       }
+
+  
+   .item{
+    text-align: center;
+
+    @include mq(lg){
+        width: 30%;
+    }
+    @include mq(sm){
+      margin-bottom: 34px;
+    }
+  
+      padding: 0 5px 0;
+
+      h3{
+        font-weight: bold;
+        margin:10px 0;
+  
+      }
+      .bicycle_txt{
+        font-size: 14px;
+     
+      }
+    }
+    @media not all and (min-width: 768px) {
+      .bicycle_item {
+        width: 100%;
+      }
+  }
+  }
